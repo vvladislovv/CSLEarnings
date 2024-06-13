@@ -26,7 +26,6 @@ namespace CSLEarnings
             food *= Convert.ToInt32(isAbleToPay);
             money -= food * foodCostPrice;
             Console.WriteLine($"In your bag {food} food units, and {money} money.");
-
         }
     }
 }
