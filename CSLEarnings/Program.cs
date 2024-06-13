@@ -10,8 +10,9 @@ namespace CSLEarnings
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello map!");
-            Console.ReadLine();
+            int i = 0;
+           // ++i;
+            Console.WriteLine((++i) + 2 + 1 + (i++) + "1"+ (++i)  * 2);
         }
     }
 }
