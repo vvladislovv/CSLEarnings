@@ -15,7 +15,7 @@ namespace CSLEarnings
             int foodCostPrice = 10;
             bool isAbleToPay;
 
-            Console.WriteLine($"Welcome in pecarnia! Today eat by {foodCostPrice} money.");
+            Console.WriteLine($"Welcome in pecarnia! Today eat zby {foodCostPrice} money.");
             Console.Write("How many money do you have?");
             money = Convert.ToInt32(Console.ReadLine());
 
