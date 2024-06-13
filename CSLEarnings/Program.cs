@@ -10,23 +10,22 @@ namespace CSLEarnings
     {
         static void Main(string[] args)
         {
-            float Health;
-            int armor;
-            int damage;
-            int precentConvert = 100;
+            int money;
+            int food;
+            int foodCostPrice = 10;
+            bool isAbleToPay;
 
-            Console.Write("Введите количество здоровья: ");
-            Health = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Welcome in pecarnia! Today eat by {foodCostPrice} money.");
+            Console.Write("How many money do you have?");
+            money = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Введите количество брони: ");
-            armor = Convert.ToInt32(Console.ReadLine());
-            
-            Console.Write("Введите количество урона: ");
-            damage = Convert.ToInt32(Console.ReadLine());
+            Console.Write("How much food do you need?");
+            food = Convert.ToInt32(Console.ReadLine());
 
-            Health -= Convert.ToSingle(damage) / precentConvert * armor;
-
-            Console.WriteLine($"Вам нанесли {damage} урона. У нас осталось {Health} здоровья.");
+            isAbleToPay = money >= food * foodCostPrice;
+            food *= Convert.ToInt32(isAbleToPay);
+            money -= food * foodCostPrice;
+            Console.WriteLine($"In your bag {food} food units, and {money} money.");
         }
     }
 }
